@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Project 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            overflow: hidden;
+            text-align: center; /* Center-align content */
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center; /* Center-align images */
+        }
+
+        .slide-arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #333;
+            padding: 8px;
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .single-image {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Ensure images don't have any extra spacing */
+            margin: 0 auto; /* Center-align images within their containers */
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Add this style to reduce the size of the first image in Task 1 */
+        .task1-image {
+            max-width: 50%; /* Adjust the percentage as needed */
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analysis of the LinkedIn Job Postings Data</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showTask('task1')">Task 1</a>
+        <a href="#" onclick="showTask('task2')">Task 2</a>
+        <a href="#" onclick="showTask('task3')">Task 3</a>
+        <a href="#" onclick="showTask('task4')">Task 4</a>
+    </nav>
+
+    <!-- Task 1 Section -->
+    <section id="task1">
+        <h2>Task 1: Analyzing the job market</h2>
+        <p>Explore the job market by analyzing salary distributions across different job categories and locales. Gain insights into salary differences with experience and uncover trends in salary increases over time. This in-depth examination of salary trends will provide valuable information for job seekers and employers alike.</p>
+
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-item"><img class="single-image task1-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_1.png" alt="Image 1"></div>
+                <div class="slider-item"><img class="single-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_2.png" alt="Image 2"></div>
+                <div class="slider-item"><img class="single-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_3.png" alt="Image 3"></div>
+            </div>
+            <div class="slide-arrow prev" onclick="prevSlide('task1')">&#10094;</div>
+            <div class="slide-arrow next" onclick="nextSlide('task1')">&#10095;</div>
+        </div>
+    </section>
+
+    <!-- Task 2 Section -->
+    <section id="task2">
+        <h2>Task 2: Analyzing company trends</h2>
+        <p>Assessing the distribution of job roles, industries, and locations, identify the most in-demand job roles, review geographic distribution, and identify which industries have the most job postings by conducting extensive data exploration and visualization on a dataset of LinkedIn job postings.</p>
+
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-item"><img class="single-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_4.png" alt="Image 1"></div>
+                <div class="slider-item"><img class="single-image task1-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_5.png" alt="Image 2"></div>
+                <div class="slider-item"><img class="single-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_6.png" alt="Image 3"></div>
+            </div>
+            <div class="slide-arrow prev" onclick="prevSlide('task2')">&#10094;</div>
+            <div class="slide-arrow next" onclick="nextSlide('task2')">&#10095;</div>
+        </div>
+    </section>
+
+    <!-- Task 3 Section -->
+    <section id="task3">
+        <h2>Task 3: Analyzing salary trends</h2>
+        <p>Performing the comprehensive analysis of company trends using LinkedIn job posting data, including extracting company details, assessing size distributions, identifying top industries, and analyzing geographic company distribution.</p>
+
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-item"><img class="single-image task1-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_7.png" alt="Image 4"></div>
+                <div class="slider-item"><img class="single-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_8.png" alt="Image 5"></div>
+                <div class="slider-item"><img class="single-image task1-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_9.png" alt="Image 6"></div>
+            </div>
+            <div class="slide-arrow prev" onclick="prevSlide('task3')">&#10094;</div>
+            <div class="slide-arrow next" onclick="nextSlide('task3')">&#10095;</div>
+        </div>
+    </section>
+
+    <!-- Task 4 Section -->
+    <section id="task4">
+        <h2>Task 4: Suggesting the best company to employees</h2>
+        <p>Utilizing a dataset of LinkedIn job postings, create and implement a recommendation system for jobs for employees that includes data preprocessing, user input for preferred job roles, filtering of companies based on factors like location, salary, and job role, ranking of these companies, and recommendations for the top-ranked companies.</p>
+        <img class="single-image task1-image" src="/Users/bhaskarpramodchennupalli/Documents/DBMS Project/SalDistJob_10.png" alt="Task 4 Image">
+    </section>
+
+    <script>
+        // Function to show the selected task and hide others
+        function showTask(task) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                if (section.id === task) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            // Call the showSlides function for the selected task
+            showSlides(task);
+        }
+
+        // Global slideIndex variables for each task
+        let slideIndexTask1 = 0;
+        let slideIndexTask2 = 0;
+        let slideIndexTask3 = 0;
+
+        function showSlides(task) {
+            const slides = document.querySelector(`#${task} .slider-content`);
+            const totalSlides = document.querySelectorAll(`#${task} .slider-item`).length;
+            let slideIndex;
+
+            switch (task) {
+                case 'task1':
+                    slideIndex = slideIndexTask1;
+                    break;
+                case 'task2':
+                    slideIndex = slideIndexTask2;
+                    break;
+                case 'task3':
+                    slideIndex = slideIndexTask3;
+                    break;
+                default:
+                    slideIndex = 0;
+            }
+
+            slideIndex = (slideIndex + totalSlides) % totalSlides; // Ensure the index wraps around
+
+            slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+
+            // Update the slideIndex for each task
+            switch (task) {
+                case 'task1':
+                    slideIndexTask1 = slideIndex;
+                    break;
+                case 'task2':
+                    slideIndexTask2 = slideIndex;
+                    break;
+                case 'task3':
+                    slideIndexTask3 = slideIndex;
+                    break;
+            }
+        }
+
+        function nextSlide(task) {
+            let slideIndex;
+
+            switch (task) {
+                case 'task1':
+                    slideIndex = ++slideIndexTask1;
+                    break;
+                case 'task2':
+                    slideIndex = ++slideIndexTask2;
+                    break;
+                case 'task3':
+                    slideIndex = ++slideIndexTask3;
+                    break;
+                default:
+                    slideIndex = 0;
+            }
+
+            showSlides(task);
+        }
+
+        function prevSlide(task) {
+            let slideIndex;
+
+            switch (task) {
+                case 'task1':
+                    slideIndex = --slideIndexTask1;
+                    break;
+                case 'task2':
+                    slideIndex = --slideIndexTask2;
+                    break;
+                case 'task3':
+                    slideIndex = --slideIndexTask3;
+                    break;
+                default:
+                    slideIndex = 0;
+            }
+
+            showSlides(task);
+        }
+    </script>
+</body>
+</html>
